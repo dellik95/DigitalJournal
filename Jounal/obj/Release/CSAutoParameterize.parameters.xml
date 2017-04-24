@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DBModel-Web.config Connection String" description="DBModel Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Server=tcp:gloomydb.database.windows.net,1433;Initial Catalog=journal;Persist Security Info=False;User ID=gloomy;Password=97072253QWE!;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Gloomy\\Desktop\\Jounal\\Jounal\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DBModel']/@connectionString" />
+  </parameter>
+</parameters>

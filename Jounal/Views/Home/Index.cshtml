@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Jounal.Models.Groups>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>WellComePage</h2>
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li type="circle"> @Html.RouteLink(item.NumGroup.ToString(), new { controller = "Students", action = "Index", id = item.Group_ID })</li>
+        }
+    </ul>
+</div>
