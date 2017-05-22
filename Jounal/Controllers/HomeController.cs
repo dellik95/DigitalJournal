@@ -5,7 +5,7 @@ using Jounal.Infrastructure;
 
 namespace Jounal.Controllers
 {
-    
+
     public class HomeController : Controller
     {
 

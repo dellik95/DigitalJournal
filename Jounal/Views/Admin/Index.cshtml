@@ -7,6 +7,10 @@
 
 <div class="panel panel-primary">
     <div class="panel-heading">
+        Учетные записи    @Html.RouteLink("Панель модератора", new { controller = "Moderator", action = "Index" },
+                         new { @class = "btn btn-primary btn-xs", style = "float: left; margin-right: 10px" })
+    </div>
+    <div class="panel-heading">
         Учетные записи    @Html.RouteLink("Роли", new { controller ="RoleAdmin", action="Index"},
                          new { @class = "btn btn-primary btn-xs", style = "float: left; margin-right: 10px" })
     </div>

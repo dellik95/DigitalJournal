@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 
 namespace Jounal.Controllers
 {
-    [Authorize(Roles = "Administrators")]
+    // [Authorize(Roles = "Administrators")]
     public class AdminController : Controller
     {
         public ActionResult Index()
@@ -70,7 +70,7 @@ namespace Jounal.Controllers
         public async Task<ActionResult> Edit(string id)
         {
             AppUser user = await UserManager.FindByIdAsync(id);
-            if (user!=null)
+            if (user != null)
             {
                 return View(user);
             }
@@ -81,11 +81,11 @@ namespace Jounal.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult>Edit(string id, string email,string password,string userName)
+        public async Task<ActionResult> Edit(string id, string email, string password, string userName)
         {
             AppUser user = await UserManager.FindByIdAsync(id);
 
-            if (user!=null)
+            if (user != null)
             {
                 user.Email = email;
                 user.UserName = userName;
@@ -99,7 +99,7 @@ namespace Jounal.Controllers
 
                 IdentityResult validPass = null;
 
-                if (password!=string.Empty)
+                if (password != string.Empty)
                 {
                     validPass = await UserManager.PasswordValidator.ValidateAsync(password);
 
