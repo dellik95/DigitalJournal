@@ -3,6 +3,7 @@
 
 @{
     ViewBag.Title = "Index";
+    int cou = 0;
 }
 
 <h2>Index</h2>
@@ -11,85 +12,98 @@
 @using (Html.BeginForm())
 {
     @Html.Hidden("groupId", (int?)ViewBag.groupId)
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <center>Електронный журнал</center>
 
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.LName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cours.Cours_ID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Groups.NumGroup)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+        </div>
+        <table class="table table-striped">
             <tr>
-                @Html.Hidden("ids", item.Student_ID)
-                <td>
-                    @Html.DisplayFor(modelItem => item.LName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cours.NumCours)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Groups.NumGroup)
-                </td>
-                @if (item.Marks.Count > 0)
-                {
-                    if (item.Marks.Count < (int)ViewBag.count)
+                <th>
+                    @Html.DisplayNameFor(model => model.LName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cours.Cours_ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Groups.NumGroup)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @Html.Hidden("ids", item.Student_ID)
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cours.NumCours)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Groups.NumGroup)
+                    </td>
+                    @if (item.Marks.Count > 0)
                     {
-                        foreach (var mark in item.Marks)
+                        if (item.Marks.Count < (int)ViewBag.count)
                         {
-                            <td>
-                                @Html.DisplayFor(m => mark.Mark)
-                            </td>
+                            foreach (var mark in item.Marks)
+                            {
+                                <td>
+                                    @Html.DisplayFor(m => mark.Mark)
+                                </td>
+                            }
+                            for (int i = 0; i < ((int)ViewBag.count) - item.Marks.Count; i++)
+                            {
+                                <td>0</td>
+                            }
                         }
-                        for (int i = 0; i < ((int)ViewBag.count) - item.Marks.Count; i++)
+                        else
                         {
-                            <td>0</td>
+                            foreach (var mark in item.Marks)
+                            {
+                                <td>
+                                    @Html.DisplayFor(m => mark.Mark)
+                                </td>
+                            }
                         }
                     }
                     else
                     {
-                        foreach (var mark in item.Marks)
+                        for (int i = 0; i < Convert.ToInt32(ViewBag.count); i++)
                         {
-                            <td>
-                                @Html.DisplayFor(m => mark.Mark)
-                            </td>
+                            <td>0</td>
                         }
                     }
-                }
-                else
-                {
-                    for (int i = 0; i < Convert.ToInt32(ViewBag.count); i++)
-                    {
-                        <td>0</td>
+                    <td>@Html.TextBox("mark")</td>
+                </tr>
+                 cou = Convert.ToInt32(ViewBag.count) + 5;
+
+                
                     }
-                }
-                <td>@Html.TextBox("mark")</td>
-            </tr>
-        }
-        <tr>
-            <td><input type="submit" name="save" value="Save" /></td>
-        <tr />
-    </table>
-}
+            <tfoot>
+                <tr>
+                    <td colspan='@cou'>
+                        <center>
+                            <input class="btn btn-primary" type="submit" name="save" value="Save" />
+                        </center>
+                    </td>
+                </tr>
+            </tfoot>
 
-
+        </table>
+    </div>
+                    }

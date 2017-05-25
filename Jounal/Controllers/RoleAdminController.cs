@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace Jounal.Controllers
 {
-    [Authorize(Roles = "Administrators")]
+  //  [Authorize(Roles = "Administrators")]
     public class RoleAdminController : Controller
     {
         private AppUserManager UserManager

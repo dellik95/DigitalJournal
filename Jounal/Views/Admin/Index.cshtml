@@ -6,13 +6,14 @@
 }
 
 <div class="panel panel-primary">
+    
     <div class="panel-heading">
-        Учетные записи    @Html.RouteLink("Панель модератора", new { controller = "Moderator", action = "Index" },
+        @Html.RouteLink("Роли", new { controller = "RoleAdmin", action = "Index" },
                          new { @class = "btn btn-primary btn-xs", style = "float: left; margin-right: 10px" })
-    </div>
-    <div class="panel-heading">
-        Учетные записи    @Html.RouteLink("Роли", new { controller ="RoleAdmin", action="Index"},
-                         new { @class = "btn btn-primary btn-xs", style = "float: left; margin-right: 10px" })
+        @Html.RouteLink("Панель модератора", new { controller = "Moderator", action = "Index" },
+               new { @class = "btn btn-primary btn-xs", style = "float: left; margin-right: 10px" })</br>
+        <center>Учетные записи</center>
+            
     </div>
     <table class="table table-striped">
         <tr>
@@ -20,34 +21,33 @@
             <th>Имя</th>
             <th>Email</th>
             <th></th>
-            <th>@Html.RouteLink("Роли", new { controller = "RoleAdmin", action = "Index" },
-                         new { @class = "btn btn-primary btn-xs", style = "float: left; margin-right: 10px" })</th>
+       
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="4" class="text-center">Нет ни одной учетной записи</td>
         </tr>
-        @if (Model.Count() == 0)
+    }
+    else
+    {
+        foreach (AppUser user in Model)
         {
             <tr>
-                <td colspan="4" class="text-center">Нет ни одной учетной записи</td>
+                <td>@user.Id</td>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>
+                    @using (Html.BeginForm("Delete", "Admin", new { id = user.Id }))
+                    {
+                        @Html.ActionLink("Изменить", "Edit", new { id = user.Id },
+                            new { @class = "btn btn-primary btn-xs", style = "float: left; margin-right: 10px" })
+                        <button class="btn btn-danger btn-xs" type="submit">Удалить</button>
+                    }
+                </td>
             </tr>
         }
-        else
-        {
-            foreach (AppUser user in Model)
-            {
-                <tr>
-                    <td>@user.Id</td>
-                    <td>@user.UserName</td>
-                    <td>@user.Email</td>
-                    <td>
-                        @using (Html.BeginForm("Delete", "Admin", new { id = user.Id }))
-                        {
-                            @Html.ActionLink("Изменить", "Edit", new { id = user.Id },
-                            new { @class = "btn btn-primary btn-xs", style = "float: left; margin-right: 10px" })
-                            <button class="btn btn-danger btn-xs" type="submit">Удалить</button>
-                        }
-                    </td>
-                </tr>
-            }
-        }
-    </table>
+    }
+</table>
 </div>
 @Html.ActionLink("Создать", "Create", null, new { @class = "btn btn-primary" })

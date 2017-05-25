@@ -6,7 +6,7 @@ using Jounal.Infrastructure;
 namespace Jounal.Controllers
 {
 
-    [Authorize]
+    //  [Authorize]
     public class StudentsController : Controller
     {
         AppIdentityDbContext journal = new AppIdentityDbContext();
@@ -15,12 +15,25 @@ namespace Jounal.Controllers
         {
             var query = (from s in journal.Students
                          where s.Group_ID == id
-                         select s);
+                         select s).ToList();
+            if (query.Count > 0)
+            {
+                if (query.Where(x => x.Marks != null) == null)
+                {
+                    ViewBag.count = 0;
+                }
+                else
+                {
+                    ViewBag.count = query.Max(x => x.Marks.Count);
+                }
+            }
+            else
+            {
+                ViewBag.count = 0;
+            }
 
-            ViewBag.count = (query.ToList().Max(x => x.Marks.Count));
-            
             ViewBag.groupId = id;
-            
+
             return View(query.ToList());
         }
         [HttpPost]
@@ -44,9 +57,6 @@ namespace Jounal.Controllers
                         where s.Group_ID == (short)groupId
                         select s;
 
-            // ViewBag.count = (journal.Students.Max(m => m.Marks.Count));
-
-            // return View("",query.ToList());
             return RedirectToRoute(new { controller = "Home", action = "Index" });
         }
     }

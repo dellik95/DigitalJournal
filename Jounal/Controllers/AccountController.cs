@@ -12,7 +12,7 @@ namespace Jounal.Controllers
 {
     public class AccountController : Controller
     {
-        [AllowAnonymous]
+     //   [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
             if (HttpContext.User.Identity.IsAuthenticated)

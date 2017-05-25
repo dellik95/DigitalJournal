@@ -10,7 +10,7 @@ namespace Jounal.Controllers
     {
 
         AppIdentityDbContext journal = new AppIdentityDbContext();
-        [Authorize]
+     //   [Authorize]
         public ActionResult Index()
         {
 
@@ -34,5 +34,9 @@ namespace Jounal.Controllers
 
             return View();
         }
+      
+
+        
     }
+
 }
