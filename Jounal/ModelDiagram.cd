@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Jounal.Models.Academic_degree" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Models\JournalModel\Academic_degree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Authorizations" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAgAAAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgAA=</HashCode>
+      <FileName>Models\JournalModel\Authorizations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Cathedra" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIEAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\Cathedra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Cours" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\Cours.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Curriculum" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\Curriculum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Groups" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIAAAAAAAAAAAAAAEAAAAAACAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\Groups.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.GroupsSubjects" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAAAAACAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\GroupsSubjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Marks" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCIAAEAAAAAACAAAAAIAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\Marks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Number_lab_modules" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\Number_lab_modules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Number_of_modules" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\Number_of_modules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Position" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\JournalModel\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Statuss" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQ=</HashCode>
+      <FileName>Models\JournalModel\Statuss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Students" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>giAAAEAAAAAAABAAAIAAAAAEAAAAAAQAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\JournalModel\Students.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Subjects" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAEAEAAAAAAAAAAAAAAQAAAAAAAQ=</HashCode>
+      <FileName>Models\JournalModel\Subjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.Teacher" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAABAABAgIEAAAAIEAAAAAAAAAAAAAAQAgAQ=</HashCode>
+      <FileName>Models\JournalModel\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.TeacherCathedra" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAIAAAAAEAAAAAAAAAAAAgAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\JournalModel\TeacherCathedra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Models.TeacherSubjectsStatus" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAEAAAAQQCAAAAAAAACAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\JournalModel\TeacherSubjectsStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Infrastructure.AppIdentityDbContext" Collapsed="true">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAMABEgAAABAAAAgMMgAACIAAAAAAEAAAAQAAAAAAAQ=</HashCode>
+      <FileName>Infrastructure\AppIdentityDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jounal.Infrastructure.IdentityDbInit" Collapsed="true">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\AppIdentityDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
