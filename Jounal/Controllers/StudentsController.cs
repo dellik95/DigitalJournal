@@ -18,7 +18,7 @@ namespace Jounal.Controllers
                          select s).ToList();
             if (query.Count > 0)
             {
-                if (query.Where(x => x.Marks != null) == null)
+                if (query.Where(x => x.Marks) == null)
                 {
                     ViewBag.count = 0;
                 }
